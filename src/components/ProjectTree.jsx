@@ -1,6 +1,6 @@
 import React, { useCallback } from "react";
 import { ReactFlowProvider } from "@reactflow/core";
-import ReactFlow, { addEdge, useEdgesState, useNodesState } from "@reactflow/core";
+import { ReactFlow, addEdge, useEdgesState, useNodesState } from "@reactflow/core";
 import { Controls } from "@reactflow/controls";
 import { Background } from "@reactflow/background";
 import "@reactflow/core/dist/style.css";
