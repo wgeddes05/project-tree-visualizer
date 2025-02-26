@@ -1,5 +1,8 @@
 import React, { useCallback } from "react";
-import ReactFlow, { Controls, Background, addEdge, useEdgesState, useNodesState } from "@reactflow/core";
+import { ReactFlowProvider } from "@reactflow/core";
+import ReactFlow, { addEdge, useEdgesState, useNodesState } from "@reactflow/core";
+import { Controls } from "@reactflow/controls";
+import { Background } from "@reactflow/background";
 import "@reactflow/core/dist/style.css";
 // import "reactflow/dist/style.css";
 
@@ -10,7 +13,10 @@ const initialNodes = [
     { id: "3", position: { x: 400, y: 100 }, data: { label: "Task B" } },
 ];
 
-const initialEdges = [{ id: "e1-2", source: "1", target: "2" }, {id: "e1-3", source: "1", target: "3" }];
+const initialEdges = [
+    { id: "e1-2", source: "1", target: "2" },
+    {id: "e1-3", source: "1", target: "3" }
+];
 
 const ProjectTree = () => {
     const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
@@ -38,4 +44,10 @@ const ProjectTree = () => {
     );
 };
 
-export default ProjectTree;
+const ProjectTreeWrapper = () => (
+    <ReactFlowProvider>
+        <ProjectTree />
+    </ReactFlowProvider>
+);
+
+export default ProjectTreeWrapper;

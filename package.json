@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reactflow/background": "^11.3.14",
     "@reactflow/core": "^11.11.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
