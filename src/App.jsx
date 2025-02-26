@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectTree from "./components/ProjectTree";
+import ProjectTree from "./components/ProjectTree.jsx";
 
 function App() {
   return (
