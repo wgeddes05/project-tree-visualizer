@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import ReactFlow, { Controls, Background, addEdge, useEdgesState, useNodesState } from "@reactflow/core";
-import "reactflow/dist/style.css";
+import "@reactflow/core/dist/style.css";
+// import "reactflow/dist/style.css";
 
 // Initial Nodes & Edges
 const initialNodes = [
